@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{144f4a4d-ffe7-4400-b844-485126a6ad2e}</ProjectGuid>
+    <RootNamespace>VynxVX</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>VynxVX</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>Module</TargetName>
+    <OutDir>.\build\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;YUBXMODULE_EXPORTS;_WINDOWS;_USRDLL;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\Luau2\Common\include;$(ProjectDir)Dependencies\Luau2\Ast\src;$(ProjectDir)Dependencies\Luau2\VM\include;$(ProjectDir)Dependencies\Luau2\VM\src;$(ProjectDir)Dependencies\Luau2;$(ProjectDir);$(ProjectDir)Dependencies\cpr\include;$(ProjectDir)Dependencies\curl\include;$(ProjectDir)Dependencies;$(ProjectDir)Dependencies\Zstd\include;$(ProjectDir)Dependencies\Luau2\Bytecode\include;$(ProjectDir)Dependencies\Luau2\Compiler\include;$(ProjectDir)Dependencies\imgui;$(ProjectDir)Dependencies\ixwebsocket;$(ProjectDir)Dependencies\mbedtls\include;$(ProjectDir)Dependencies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>cpr.lib;libcurl_release.lib;Ws2_32.lib;Wldap32.lib;Normaliz.lib;Crypt32.lib;d3d11.lib;dxgi.lib;zstd_static.lib;Winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\curl\lib;$(ProjectDir)Dependencies\cpr\lib;$(ProjectDir)Dependencies\cryptopp\lib;$(ProjectDir)Dependencies\Zstd\lib;$(ProjectDir)Dependencies\mbedtls\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;YUBXMODULE_EXPORTS;_WINDOWS;_USRDLL;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\Luau2\Compiler\include;$(ProjectDir)Dependencies\Luau2\Common\include;$(ProjectDir)Dependencies\Luau2\Ast\src;$(ProjectDir)Dependencies\Luau2\VM\include;$(ProjectDir)Dependencies\Luau2\VM\src;$(ProjectDir)Dependencies\Luau2;$(ProjectDir);$(ProjectDir)Dependencies\cpr\include;$(ProjectDir)Dependencies\curl\include;$(ProjectDir)Dependencies;$(ProjectDir)Dependencies\Zstd\include;$(ProjectDir)Dependencies\Luau2\Bytecode\include;$(ProjectDir)Dependencies\Luau2\Compiler\include;$(ProjectDir)Dependencies\imgui;$(ProjectDir)Dependencies\ixwebsocket;$(ProjectDir)Dependencies\mbedtls\include;$(ProjectDir)Dependencies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>cpr.lib;libcurl_release.lib;Ws2_32.lib;Wldap32.lib;Normaliz.lib;Crypt32.lib;d3d11.lib;dxgi.lib;zstd_static.lib;Winhttp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\curl\lib;$(ProjectDir)Dependencies\cpr\lib;$(ProjectDir)Dependencies\cryptopp\lib;$(ProjectDir)Dependencies\Zstd\lib;$(ProjectDir)Dependencies\mbedtls\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;YUBXMODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;YUBXMODULE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="RBX\environment\libs\actor\actor.cpp" />
+    <ClCompile Include="Renderer\graphics.cpp" />
+    <ClCompile Include="Renderer\ui\ui.cpp" />
+    <ClCompile Include="Utilitys\Communication\Communication.cpp" />
+    <ClCompile Include="RBX\environment\env.cpp" />
+    <ClCompile Include="RBX\environment\hooks\hooks.cpp" />
+    <ClCompile Include="RBX\environment\yielding\yielding.cpp" />
+    <ClCompile Include="RBX\execution\execution.cpp" />
+    <ClCompile Include="RBX\task_scheduler\task_scheduler.cpp" />
+    <ClCompile Include="RBX\environment\libs\bit\bit.cpp" />
+    <ClCompile Include="RBX\environment\libs\cache\cache.cpp" />
+    <ClCompile Include="RBX\environment\libs\crypt\crypt.cpp" />
+    <ClCompile Include="RBX\environment\libs\closures\closures.cpp" />
+    <ClCompile Include="RBX\environment\libs\debug\debug.cpp" />
+    <ClCompile Include="RBX\environment\libs\drawing\drawing.cpp" />
+    <ClCompile Include="RBX\environment\libs\drawingimmediate\drawingimmediate.cpp" />
+    <ClCompile Include="RBX\environment\libs\luastateproxy\luastateproxy.cpp" />
+    <ClCompile Include="RBX\environment\libs\filedialog\filedialog.cpp" />
+    <ClCompile Include="RBX\environment\libs\filesystem\filesystem.cpp" />
+    <ClCompile Include="RBX\environment\libs\http\http.cpp" />
+    <ClCompile Include="RBX\environment\libs\input\input.cpp" />
+    <ClCompile Include="RBX\environment\libs\instance\instance.cpp" />
+    <ClCompile Include="RBX\environment\libs\metatable\metatable.cpp" />
+    <ClCompile Include="RBX\environment\libs\miscellaneous\miscellaneous.cpp" />
+    <ClCompile Include="RBX\environment\libs\oth\oth.cpp" />
+    <ClCompile Include="RBX\environment\libs\raknet\raknet.cpp" />
+    <ClCompile Include="RBX\environment\libs\reflection\reflection.cpp" />
+    <ClCompile Include="RBX\environment\libs\regex\regex.cpp" />
+    <ClCompile Include="RBX\environment\libs\script\script.cpp" />
+    <ClCompile Include="RBX\environment\libs\signals\signals.cpp" />
+    <ClCompile Include="RBX\environment\libs\websocket\websocket.cpp" />
+    <ClCompile Include="RBX\environment\libs\rconsole\rconsole.cpp" />
+    <ClCompile Include="Dependencies\cpr\src\*.cpp" />
+    <ClCompile Include="Dependencies\imgui\addons\TextEditor.cpp" />
+    <ClCompile Include="Dependencies\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Dependencies\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Dependencies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Dependencies\Luau2\Ast\src\*.cpp" />
+    <ClCompile Include="Dependencies\Luau2\Bytecode\src\*.cpp" />
+    <ClCompile Include="Dependencies\Luau2\Common\src\*.cpp" />
+    <ClCompile Include="Dependencies\Luau2\Compiler\src\*.cpp" />
+    <ClCompile Include="Dependencies\Luau2\VM\src\*.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CrashHandler.hpp" />
+    <ClInclude Include="Dependencies\cpp-httplib\httplib.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\aes.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\aria.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\asn1.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\asn1write.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\base64.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\bignum.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\block_cipher.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\build_info.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\camellia.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ccm.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\chacha20.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\chachapoly.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\check_config.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\cipher.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\cmac.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\compat-2.x.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_adjust_legacy_crypto.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_adjust_legacy_from_psa.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_adjust_psa_from_legacy.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_adjust_psa_superset_legacy.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_adjust_ssl.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_adjust_x509.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\config_psa.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\constant_time.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ctr_drbg.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\debug.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\des.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\dhm.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ecdh.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ecdsa.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ecjpake.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ecp.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\entropy.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\error.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\gcm.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\hkdf.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\hmac_drbg.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\lms.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\mbedtls_config.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\md.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\md5.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\memory_buffer_alloc.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\net_sockets.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\nist_kw.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\oid.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\pem.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\pk.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\pkcs12.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\pkcs5.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\pkcs7.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\platform.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\platform_time.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\platform_util.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\poly1305.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\private_access.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\psa_util.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ripemd160.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\rsa.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\sha1.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\sha256.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\sha3.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\sha512.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ssl.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ssl_cache.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ssl_ciphersuites.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ssl_cookie.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\ssl_ticket.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\threading.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\timing.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\version.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\x509.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\x509_crl.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\x509_crt.h" />
+    <ClInclude Include="Dependencies\mbedtls\include\mbedtls\x509_csr.h" />
+    <ClInclude Include="RBX\environment\libs\actor\actor.hpp" />
+    <ClInclude Include="RBX\environment\libs\closures\closures.hpp" />
+    <ClInclude Include="RBX\environment\libs\crypt\Sha3.hpp" />
+    <ClInclude Include="RBX\environment\libs\rconsole\rconsole.hpp" />
+    <ClInclude Include="RBX\security\integrity.hpp" />
+    <ClInclude Include="RBX\security\lcgmixing.hpp" />
+    <ClInclude Include="Renderer\graphics.h" />
+    <ClInclude Include="Renderer\ui\ui.h" />
+    <ClInclude Include="Utilitys\Utils.hpp" />
+    <ClInclude Include="Utilitys\RingStatus.hpp" />
+    <ClInclude Include="Utilitys\TPHandler.hpp" />
+    <ClInclude Include="Utilitys\Globals.hpp" />
+    <ClInclude Include="Utilitys\Communication\Communication.hpp" />
+    <ClInclude Include="Renderer\Renderer.hpp" />
+    <ClInclude Include="RBX\update.hpp" />
+    <ClInclude Include="RBX\security\xorstr.hpp" />
+    <ClInclude Include="RBX\task_scheduler\task_scheduler.hpp" />
+    <ClInclude Include="RBX\execution\execution.hpp" />
+    <ClInclude Include="RBX\environment\env.hpp" />
+    <ClInclude Include="RBX\environment\hooks\hooks.hpp" />
+    <ClInclude Include="RBX\environment\yielding\yielding.hpp" />
+    <ClInclude Include="RBX\environment\Helper\LuauHelper.hpp" />
+    <ClInclude Include="RBX\environment\Helper\Manager.hpp" />
+    <ClInclude Include="RBX\environment\Helper\Sha3.hpp" />
+    <ClInclude Include="RBX\environment\libs\bit\bit.hpp" />
+    <ClInclude Include="RBX\environment\libs\cache\cache.hpp" />
+    <ClInclude Include="RBX\environment\libs\crypt\crypt.hpp" />
+    <ClInclude Include="RBX\environment\libs\debug\debug.hpp" />
+    <ClInclude Include="RBX\environment\libs\drawing\drawing.hpp" />
+    <ClInclude Include="RBX\environment\libs\drawingimmediate\drawingimmediate.hpp" />
+    <ClInclude Include="RBX\environment\libs\luastateproxy\luastateproxy.hpp" />
+    <ClInclude Include="RBX\environment\libs\filedialog\filedialog.hpp" />
+    <ClInclude Include="RBX\environment\libs\filesystem\filesystem.hpp" />
+    <ClInclude Include="RBX\environment\libs\http\http.hpp" />
+    <ClInclude Include="RBX\environment\libs\input\input.hpp" />
+    <ClInclude Include="RBX\environment\libs\instance\instance.hpp" />
+    <ClInclude Include="RBX\environment\libs\metatable\metatable.hpp" />
+    <ClInclude Include="RBX\environment\libs\miscellaneous\miscellaneous.hpp" />
+    <ClInclude Include="RBX\environment\libs\oth\oth.hpp" />
+    <ClInclude Include="RBX\environment\libs\raknet\raknet.hpp" />
+    <ClInclude Include="RBX\environment\libs\reflection\reflection.hpp" />
+    <ClInclude Include="RBX\environment\libs\regex\regex.hpp" />
+    <ClInclude Include="RBX\environment\libs\script\script.hpp" />
+    <ClInclude Include="RBX\environment\libs\signals\signals.hpp" />
+    <ClInclude Include="RBX\environment\libs\websocket\websocket.hpp" />
+    <ClInclude Include="Dependencies\imgui\addons\TextEditor.h" />
+    <ClInclude Include="Dependencies\imgui\imgui.h" />
+    <ClInclude Include="Dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="Dependencies\nlohmann\json.hpp" />
+    <ClInclude Include="Dependencies\Zstd\include\zstd\xxhash.h" />
+    <ClInclude Include="Dependencies\Zstd\include\zstd\zstd.h" />
+    <ClInclude Include="Dependencies\Luau2\**\*.h" />
+    <ClInclude Include="Dependencies\cpr\include\cpr\*.h" />
+    <ClInclude Include="Dependencies\curl\include\curl\*.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Dependencies\cpr\lib\cpr.lib" />
+    <Library Include="Dependencies\curl\lib\libcurl_release.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
