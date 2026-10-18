@@ -1,4 +1,4 @@
-#include "real.h"
+#include "contract.h"
 #include "ipc.h"
 #include <Windows.h>
 #include <cstdio>
@@ -45,7 +45,7 @@ static bool read_sentinel(uintptr_t base, uintptr_t& dm_out, unsigned long long&
     __try {
         uintptr_t fake = *(uintptr_t*)(base + (uintptr_t)rv::FakeDataModel);
         if (!fake) return false;
-        uintptr_t dm = *(uintptr_t*)(fake + (uintptr_t)rv::RealDataModel);
+        uintptr_t dm = *(uintptr_t*)(fake + (uintptr_t)rv::DataModelPtr);
         if (!dm) return false;
         dm_out = dm;
         value_out = *(unsigned long long*)(dm + (uintptr_t)rv::GameLoadedSentinel);

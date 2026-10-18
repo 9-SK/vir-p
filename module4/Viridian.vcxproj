@@ -54,7 +54,7 @@
     <ClCompile Include="src\ipc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\real.h" />
+    <ClInclude Include="src\contract.h" />
     <ClInclude Include="src\ipc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
