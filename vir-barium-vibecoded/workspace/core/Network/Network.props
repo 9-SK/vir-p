@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Memory.cpp"><ObjectFileName>$(IntDir)NetworkMemory.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Transport.cpp"><ObjectFileName>$(IntDir)NetworkTransport.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Observer.cpp">
+      <ObjectFileName>$(IntDir)NetworkObserver.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/minhook-1.3.4/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)workspace/utils/Packets/Logger.cpp"><ObjectFileName>$(IntDir)PacketLogger.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)workspace/utils/Packets/Protocol/PingItem.cpp"><ObjectFileName>$(IntDir)PingItem.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)workspace/client/Environment/Libraries/Raknet/Raknet.cpp"><ObjectFileName>$(IntDir)Raknet.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)workspace/client/Environment/Libraries/Raknet/Helpers/Helper.cpp"><ObjectFileName>$(IntDir)RaknetHelper.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/minhook-1.3.4/src/buffer.c"><ObjectFileName>$(IntDir)NetworkHookBuffer.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/minhook-1.3.4/src/hook.c"><ObjectFileName>$(IntDir)NetworkHook.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/minhook-1.3.4/src/trampoline.c"><ObjectFileName>$(IntDir)NetworkHookTrampoline.obj</ObjectFileName></ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/minhook-1.3.4/src/hde/hde64.c"><ObjectFileName>$(IntDir)NetworkHookDisassembler.obj</ObjectFileName></ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Memory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Transport.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Observer.h" />
+    <ClInclude Include="$(ProjectDir)workspace/utils/Packets/Packet.h" />
+    <ClInclude Include="$(ProjectDir)workspace/utils/Packets/Logger.h" />
+    <ClInclude Include="$(ProjectDir)workspace/utils/Packets/Protocol/PingItem.h" />
+    <ClInclude Include="$(ProjectDir)workspace/client/Environment/Libraries/Raknet/Raknet.h" />
+    <ClInclude Include="$(ProjectDir)workspace/client/Environment/Libraries/Raknet/Helpers/Helper.h" />
+  </ItemGroup>
+</Project>

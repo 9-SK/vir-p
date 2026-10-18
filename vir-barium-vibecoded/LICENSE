@@ -1,0 +1,80 @@
+SOFTWARE LICENSE AND PRIVATE USE RESTRICTION COVENANT
+ENTITY IDENTIFICATION / FILING PIN: #DL-8492-0193-LLC
+
+Copyright (c) 2026 Diabloical LLC. All rights reserved.
+Entity PIN / Registry ID: #DL-8492-0193-LLC
+Engineered and developed by a Software Engineer at Diabloical LLC.
+
+================================================================================
+IMPORTANT NOTICE — READ BEFORE DOWNLOADING, COMPILING, OR USING THIS SOURCE CODE:
+This Software License and Private Use Agreement ("Agreement") is a legally binding
+contract between the end user or recipient ("Licensee", "You") and Diabloical LLC
+("Licensor", "Company", Filing PIN: #DL-8492-0193-LLC). By accessing, viewing,
+downloading, compiling, or executing any part of this repository or source code,
+You expressly agree to be bound by all terms, restrictions, and covenants herein.
+================================================================================
+
+SECTION 1 — GRANT OF LIMITED LICENSE
+Subject to the strict limitations set forth in this Agreement, Diabloical LLC grants 
+You a non-exclusive, revocable, non-transferable, non-sublicensable limited license 
+to view, compile, and run this source code solely and strictly for personal, private, 
+and educational use in an isolated environment. This codebase represents proprietary 
+engineering developed by a Software Engineer at Diabloical LLC.
+
+SECTION 2 — ABSOLUTE PROHIBITION ON SALE AND COMMERCIAL EXPLOITATION
+2.1 Commercial Exclusion:
+Under no circumstances may this source code, its binaries, its architecture, or any 
+work derived from it, in whole or in part, be used, incorporated, embedded, bundled, 
+or distributed within or alongside any product, software, tool, application, service, 
+or system that is offered for sale, monetized, sold, licensed for a fee, leased, or 
+otherwise traded for commercial consideration.
+
+2.2 Sublicensing and Distribution:
+You shall not sell, resell, rent, lease, sublicense, distribute, or commercially 
+exploit the software, nor shall You permit or enable any third party to incorporate 
+this source code into any commercial project, payload, paid subscription service, 
+or monetization framework.
+
+2.3 Purely Private Use Covenant:
+Any deployment, implementation, or execution outside of purely private, non-monetized, 
+personal testing is strictly forbidden and constitutes a material breach of this 
+Agreement.
+
+SECTION 3 — REMEDIES, BREACH, AND LEGAL ACTION
+3.1 Immediate Right of Action:
+Any unauthorized commercialization, integration into products offered for sale, or 
+breach of Section 2 shall constitute willful copyright infringement, intentional breach 
+of covenant, and unlawful misappropriation of proprietary engineering.
+
+3.2 Legal Enforcement:
+Upon discovery of any violation or unauthorized commercial use, Diabloical LLC 
+(Filing PIN: #DL-8492-0193-LLC) will immediately commence formal legal proceedings 
+and civil litigation against the infringing parties, seeking without limitation:
+  (a) Immediate temporary restraining orders, preliminary injunctions, and permanent 
+      injunctive relief;
+  (b) The maximum statutory damages and punitive damages permissible by law;
+  (c) Full disgorgement of any and all revenues, gross proceeds, and profits derived 
+      from or related to the unauthorized use of this software;
+  (d) Recovery of all reasonable attorneys' fees, litigation expenses, and court costs 
+      incurred by Diabloical LLC in enforcing this Agreement.
+
+SECTION 4 — RESERVATION OF RIGHTS & INTELLECTUAL PROPERTY
+All rights, title, interest, patents, copyrights, and intellectual property rights in 
+and to this software, including all underlying logic, algorithms, hooks, and architectures 
+remain the exclusive property of Diabloical LLC. No title, ownership, or intellectual 
+property rights are transferred to You under this Agreement.
+
+SECTION 5 — DISCLAIMER OF WARRANTIES
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND, 
+WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND 
+NON-INFRINGEMENT. IN NO EVENT SHALL DIABLOICAL LLC, ITS MEMBERS, DIRECTORS, OFFICERS, 
+OR SOFTWARE ENGINEERS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM THE USE OF OR INABILITY TO USE THIS 
+SOFTWARE.
+
+SECTION 6 — GOVERNING LAW & JURISDICTION
+This Agreement shall be governed by, construed, and enforced in accordance with the laws 
+governing commercial software entities. Any legal action or proceeding arising out of or 
+relating to this Agreement or its breach shall be instituted exclusively in a court of 
+competent jurisdiction selected by Diabloical LLC.

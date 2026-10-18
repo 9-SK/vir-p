@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/cpr-1.11.2/include;$(ProjectDir)Dependencies/curl-8.17.0/include;$(ProjectDir)Dependencies/zlib-1.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_STATICLIB;CPR_CURL_NOSIGNAL;USE_SCHANNEL;USE_WINDOWS_SSPI;HAVE_ZLIB_H;HAVE_LIBZ;USE_THREADS_WIN32;USE_WIN32_IDN;CURL_DISABLE_LDAP;CURL_DISABLE_LDAPS;_WIN32_WINNT=0x0602;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Ws2_32.lib;Crypt32.lib;Secur32.lib;Wldap32.lib;Normaliz.lib;Bcrypt.lib;Advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/accept_encoding.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_accept_encoding.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/async.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_async.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/auth.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_auth.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/bearer.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_bearer.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/callback.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_callback.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/cert_info.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_cert_info.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/cookies.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_cookies.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/cprtypes.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_cprtypes.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/curl_container.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_curl_container.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/curlholder.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_curlholder.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/curlmultiholder.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_curlmultiholder.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/error.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_error.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/file.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_file.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/interceptor.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_interceptor.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/multipart.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_multipart.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/multiperform.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_multiperform.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/parameters.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_parameters.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/payload.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_payload.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/proxies.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_proxies.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/proxyauth.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_proxyauth.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/redirect.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_redirect.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/response.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_response.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/session.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_session.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/ssl_ctx.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_ssl_ctx.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/threadpool.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_threadpool.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/timeout.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_timeout.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/unix_socket.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_unix_socket.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/cpr-1.11.2/cpr/util.cpp">
+      <ObjectFileName>$(IntDir)http/cpr_util.obj</ObjectFileName>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/altsvc.c">
+      <ObjectFileName>$(IntDir)http/curl_altsvc.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/amigaos.c">
+      <ObjectFileName>$(IntDir)http/curl_amigaos.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/asyn-ares.c">
+      <ObjectFileName>$(IntDir)http/curl_asyn-ares.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/asyn-base.c">
+      <ObjectFileName>$(IntDir)http/curl_asyn-base.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/asyn-thrdd.c">
+      <ObjectFileName>$(IntDir)http/curl_asyn-thrdd.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/bufq.c">
+      <ObjectFileName>$(IntDir)http/curl_bufq.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/bufref.c">
+      <ObjectFileName>$(IntDir)http/curl_bufref.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cf-h1-proxy.c">
+      <ObjectFileName>$(IntDir)http/curl_cf-h1-proxy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cf-h2-proxy.c">
+      <ObjectFileName>$(IntDir)http/curl_cf-h2-proxy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cf-haproxy.c">
+      <ObjectFileName>$(IntDir)http/curl_cf-haproxy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cf-https-connect.c">
+      <ObjectFileName>$(IntDir)http/curl_cf-https-connect.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cf-ip-happy.c">
+      <ObjectFileName>$(IntDir)http/curl_cf-ip-happy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cf-socket.c">
+      <ObjectFileName>$(IntDir)http/curl_cf-socket.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cfilters.c">
+      <ObjectFileName>$(IntDir)http/curl_cfilters.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/conncache.c">
+      <ObjectFileName>$(IntDir)http/curl_conncache.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/connect.c">
+      <ObjectFileName>$(IntDir)http/curl_connect.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/content_encoding.c">
+      <ObjectFileName>$(IntDir)http/curl_content_encoding.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cookie.c">
+      <ObjectFileName>$(IntDir)http/curl_cookie.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cshutdn.c">
+      <ObjectFileName>$(IntDir)http/curl_cshutdn.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_addrinfo.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_addrinfo.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_endian.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_endian.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_fnmatch.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_fnmatch.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_fopen.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_fopen.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_get_line.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_get_line.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_gethostname.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_gethostname.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_gssapi.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_gssapi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_memrchr.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_memrchr.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_ntlm_core.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_ntlm_core.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_range.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_range.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_rtmp.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_rtmp.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_sasl.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_sasl.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_sha512_256.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_sha512_256.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_sspi.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_sspi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_threads.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_threads.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curl_trc.c">
+      <ObjectFileName>$(IntDir)http/curl_curl_trc.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cw-out.c">
+      <ObjectFileName>$(IntDir)http/curl_cw-out.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/cw-pause.c">
+      <ObjectFileName>$(IntDir)http/curl_cw-pause.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/dict.c">
+      <ObjectFileName>$(IntDir)http/curl_dict.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/doh.c">
+      <ObjectFileName>$(IntDir)http/curl_doh.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/dynhds.c">
+      <ObjectFileName>$(IntDir)http/curl_dynhds.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/easy.c">
+      <ObjectFileName>$(IntDir)http/curl_easy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/easygetopt.c">
+      <ObjectFileName>$(IntDir)http/curl_easygetopt.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/easyoptions.c">
+      <ObjectFileName>$(IntDir)http/curl_easyoptions.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/escape.c">
+      <ObjectFileName>$(IntDir)http/curl_escape.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/fake_addrinfo.c">
+      <ObjectFileName>$(IntDir)http/curl_fake_addrinfo.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/file.c">
+      <ObjectFileName>$(IntDir)http/curl_file.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/fileinfo.c">
+      <ObjectFileName>$(IntDir)http/curl_fileinfo.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/formdata.c">
+      <ObjectFileName>$(IntDir)http/curl_formdata.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/ftp.c">
+      <ObjectFileName>$(IntDir)http/curl_ftp.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/ftplistparser.c">
+      <ObjectFileName>$(IntDir)http/curl_ftplistparser.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/getenv.c">
+      <ObjectFileName>$(IntDir)http/curl_getenv.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/getinfo.c">
+      <ObjectFileName>$(IntDir)http/curl_getinfo.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/gopher.c">
+      <ObjectFileName>$(IntDir)http/curl_gopher.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/hash.c">
+      <ObjectFileName>$(IntDir)http/curl_hash.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/headers.c">
+      <ObjectFileName>$(IntDir)http/curl_headers.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/hmac.c">
+      <ObjectFileName>$(IntDir)http/curl_hmac.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/hostip.c">
+      <ObjectFileName>$(IntDir)http/curl_hostip.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/hostip4.c">
+      <ObjectFileName>$(IntDir)http/curl_hostip4.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/hostip6.c">
+      <ObjectFileName>$(IntDir)http/curl_hostip6.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/hsts.c">
+      <ObjectFileName>$(IntDir)http/curl_hsts.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http.c">
+      <ObjectFileName>$(IntDir)http/curl_http.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http1.c">
+      <ObjectFileName>$(IntDir)http/curl_http1.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http2.c">
+      <ObjectFileName>$(IntDir)http/curl_http2.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http_aws_sigv4.c">
+      <ObjectFileName>$(IntDir)http/curl_http_aws_sigv4.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http_chunks.c">
+      <ObjectFileName>$(IntDir)http/curl_http_chunks.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http_digest.c">
+      <ObjectFileName>$(IntDir)http/curl_http_digest.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http_negotiate.c">
+      <ObjectFileName>$(IntDir)http/curl_http_negotiate.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http_ntlm.c">
+      <ObjectFileName>$(IntDir)http/curl_http_ntlm.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/http_proxy.c">
+      <ObjectFileName>$(IntDir)http/curl_http_proxy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/httpsrr.c">
+      <ObjectFileName>$(IntDir)http/curl_httpsrr.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/idn.c">
+      <ObjectFileName>$(IntDir)http/curl_idn.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/if2ip.c">
+      <ObjectFileName>$(IntDir)http/curl_if2ip.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/imap.c">
+      <ObjectFileName>$(IntDir)http/curl_imap.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/ldap.c">
+      <ObjectFileName>$(IntDir)http/curl_ldap.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/llist.c">
+      <ObjectFileName>$(IntDir)http/curl_llist.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/macos.c">
+      <ObjectFileName>$(IntDir)http/curl_macos.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/md4.c">
+      <ObjectFileName>$(IntDir)http/curl_md4.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/md5.c">
+      <ObjectFileName>$(IntDir)http/curl_md5.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/memdebug.c">
+      <ObjectFileName>$(IntDir)http/curl_memdebug.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/mime.c">
+      <ObjectFileName>$(IntDir)http/curl_mime.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/mprintf.c">
+      <ObjectFileName>$(IntDir)http/curl_mprintf.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/mqtt.c">
+      <ObjectFileName>$(IntDir)http/curl_mqtt.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/multi.c">
+      <ObjectFileName>$(IntDir)http/curl_multi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/multi_ev.c">
+      <ObjectFileName>$(IntDir)http/curl_multi_ev.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/multi_ntfy.c">
+      <ObjectFileName>$(IntDir)http/curl_multi_ntfy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/netrc.c">
+      <ObjectFileName>$(IntDir)http/curl_netrc.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/noproxy.c">
+      <ObjectFileName>$(IntDir)http/curl_noproxy.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/openldap.c">
+      <ObjectFileName>$(IntDir)http/curl_openldap.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/parsedate.c">
+      <ObjectFileName>$(IntDir)http/curl_parsedate.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/pingpong.c">
+      <ObjectFileName>$(IntDir)http/curl_pingpong.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/pop3.c">
+      <ObjectFileName>$(IntDir)http/curl_pop3.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/progress.c">
+      <ObjectFileName>$(IntDir)http/curl_progress.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/psl.c">
+      <ObjectFileName>$(IntDir)http/curl_psl.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/rand.c">
+      <ObjectFileName>$(IntDir)http/curl_rand.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/rename.c">
+      <ObjectFileName>$(IntDir)http/curl_rename.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/request.c">
+      <ObjectFileName>$(IntDir)http/curl_request.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/rtsp.c">
+      <ObjectFileName>$(IntDir)http/curl_rtsp.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/select.c">
+      <ObjectFileName>$(IntDir)http/curl_select.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/sendf.c">
+      <ObjectFileName>$(IntDir)http/curl_sendf.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/setopt.c">
+      <ObjectFileName>$(IntDir)http/curl_setopt.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/sha256.c">
+      <ObjectFileName>$(IntDir)http/curl_sha256.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/share.c">
+      <ObjectFileName>$(IntDir)http/curl_share.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/slist.c">
+      <ObjectFileName>$(IntDir)http/curl_slist.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/smb.c">
+      <ObjectFileName>$(IntDir)http/curl_smb.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/smtp.c">
+      <ObjectFileName>$(IntDir)http/curl_smtp.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/socketpair.c">
+      <ObjectFileName>$(IntDir)http/curl_socketpair.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/socks.c">
+      <ObjectFileName>$(IntDir)http/curl_socks.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/socks_gssapi.c">
+      <ObjectFileName>$(IntDir)http/curl_socks_gssapi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/socks_sspi.c">
+      <ObjectFileName>$(IntDir)http/curl_socks_sspi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/speedcheck.c">
+      <ObjectFileName>$(IntDir)http/curl_speedcheck.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/splay.c">
+      <ObjectFileName>$(IntDir)http/curl_splay.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/strcase.c">
+      <ObjectFileName>$(IntDir)http/curl_strcase.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/strdup.c">
+      <ObjectFileName>$(IntDir)http/curl_strdup.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/strequal.c">
+      <ObjectFileName>$(IntDir)http/curl_strequal.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/strerror.c">
+      <ObjectFileName>$(IntDir)http/curl_strerror.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/system_win32.c">
+      <ObjectFileName>$(IntDir)http/curl_system_win32.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/telnet.c">
+      <ObjectFileName>$(IntDir)http/curl_telnet.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/tftp.c">
+      <ObjectFileName>$(IntDir)http/curl_tftp.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/transfer.c">
+      <ObjectFileName>$(IntDir)http/curl_transfer.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/uint-bset.c">
+      <ObjectFileName>$(IntDir)http/curl_uint-bset.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/uint-hash.c">
+      <ObjectFileName>$(IntDir)http/curl_uint-hash.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/uint-spbset.c">
+      <ObjectFileName>$(IntDir)http/curl_uint-spbset.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/uint-table.c">
+      <ObjectFileName>$(IntDir)http/curl_uint-table.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/url.c">
+      <ObjectFileName>$(IntDir)http/curl_url.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/urlapi.c">
+      <ObjectFileName>$(IntDir)http/curl_urlapi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/version.c">
+      <ObjectFileName>$(IntDir)http/curl_version.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/ws.c">
+      <ObjectFileName>$(IntDir)http/curl_ws.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/cleartext.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_cleartext.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/cram.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_cram.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/digest.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_digest.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/digest_sspi.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_digest_sspi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/gsasl.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_gsasl.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/krb5_gssapi.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_krb5_gssapi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/krb5_sspi.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_krb5_sspi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/ntlm.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_ntlm.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/ntlm_sspi.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_ntlm_sspi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/oauth2.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_oauth2.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/spnego_gssapi.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_spnego_gssapi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/spnego_sspi.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_spnego_sspi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vauth/vauth.c">
+      <ObjectFileName>$(IntDir)http/curl_vauth_vauth.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/apple.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_apple.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/cipher_suite.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_cipher_suite.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/gtls.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_gtls.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/hostcheck.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_hostcheck.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/keylog.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_keylog.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/mbedtls.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_mbedtls.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/mbedtls_threadlock.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_mbedtls_threadlock.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/openssl.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_openssl.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/rustls.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_rustls.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/schannel.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_schannel.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/schannel_verify.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_schannel_verify.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/vtls.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_vtls.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/vtls_scache.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_vtls_scache.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/vtls_spack.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_vtls_spack.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/wolfssl.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_wolfssl.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vtls/x509asn1.c">
+      <ObjectFileName>$(IntDir)http/curl_vtls_x509asn1.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vquic/curl_ngtcp2.c">
+      <ObjectFileName>$(IntDir)http/curl_vquic_curl_ngtcp2.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vquic/curl_osslq.c">
+      <ObjectFileName>$(IntDir)http/curl_vquic_curl_osslq.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vquic/curl_quiche.c">
+      <ObjectFileName>$(IntDir)http/curl_vquic_curl_quiche.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vquic/vquic.c">
+      <ObjectFileName>$(IntDir)http/curl_vquic_vquic.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vquic/vquic-tls.c">
+      <ObjectFileName>$(IntDir)http/curl_vquic_vquic-tls.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vssh/libssh.c">
+      <ObjectFileName>$(IntDir)http/curl_vssh_libssh.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vssh/libssh2.c">
+      <ObjectFileName>$(IntDir)http/curl_vssh_libssh2.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/vssh/curl_path.c">
+      <ObjectFileName>$(IntDir)http/curl_vssh_curl_path.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/base64.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_base64.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/dynbuf.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_dynbuf.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/fopen.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_fopen.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/inet_ntop.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_inet_ntop.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/inet_pton.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_inet_pton.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/multibyte.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_multibyte.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/nonblock.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_nonblock.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/strerr.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_strerr.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/strparse.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_strparse.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/timediff.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_timediff.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/timeval.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_timeval.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/version_win32.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_version_win32.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/wait.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_wait.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/warnless.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_warnless.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/curl-8.17.0/lib/curlx/winapi.c">
+      <ObjectFileName>$(IntDir)http/curl_curlx_winapi.obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies/curl-8.17.0/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/adler32.c">
+      <ObjectFileName>$(IntDir)http/zlib_adler32.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/compress.c">
+      <ObjectFileName>$(IntDir)http/zlib_compress.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/crc32.c">
+      <ObjectFileName>$(IntDir)http/zlib_crc32.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/deflate.c">
+      <ObjectFileName>$(IntDir)http/zlib_deflate.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/gzclose.c">
+      <ObjectFileName>$(IntDir)http/zlib_gzclose.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/gzlib.c">
+      <ObjectFileName>$(IntDir)http/zlib_gzlib.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/gzread.c">
+      <ObjectFileName>$(IntDir)http/zlib_gzread.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/gzwrite.c">
+      <ObjectFileName>$(IntDir)http/zlib_gzwrite.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/infback.c">
+      <ObjectFileName>$(IntDir)http/zlib_infback.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/inffast.c">
+      <ObjectFileName>$(IntDir)http/zlib_inffast.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/inflate.c">
+      <ObjectFileName>$(IntDir)http/zlib_inflate.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/inftrees.c">
+      <ObjectFileName>$(IntDir)http/zlib_inftrees.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/trees.c">
+      <ObjectFileName>$(IntDir)http/zlib_trees.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/uncompr.c">
+      <ObjectFileName>$(IntDir)http/zlib_uncompr.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)Dependencies/zlib-1.3.1/zutil.c">
+      <ObjectFileName>$(IntDir)http/zlib_zutil.obj</ObjectFileName>
+      <CompileAs>CompileAsC</CompileAs>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+  </ItemGroup>
+</Project>
+
