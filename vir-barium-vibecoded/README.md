@@ -82,9 +82,7 @@ notes; the direction was abandoned in favor of the module4 base.
 ## Family
 
 ```
-viridian v8 (root workspace)            first client-state executor, scripts ran
- └─ module/  -> vir-alpha-vibecoded     (Hyperion tree, full env; working)
-     ├─ module2/  (exbeta base port)    froze during step; abandoned
-     └─ module3/  -> vir-barium-vibecoded   <- this branch (Alpen port; init faults)
-         └─ module4/  (vir-r-base3-beta)    current base -> main
+vir-alpha-vibecoded   working legacy module     (redundent/module — VynxVX tree)
+vir-barium-vibecoded  Alpen-base port           (module3 — init faults)           <- this branch
+main                  current base              (module4 — vir-r-base3-beta)
 ```
